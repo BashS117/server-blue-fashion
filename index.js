@@ -5,11 +5,11 @@ import cors from "cors";
 import {MercadoPagoConfig, Preference} from "mercadopago";
 
 const client = new MercadoPagoConfig({
-    accessToken: import.meta.env.accessToken,
+    accessToken: process.env.accessToken,
 });
 
 const app = express();
-const  port = process.env.PORT ;
+const  port = process.env.PORT ||3000 ;
 
 app.use(cors());
 app.use(express.json());
