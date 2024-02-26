@@ -53,6 +53,8 @@ app.post("/create_preference", async(req,res)=>{
     }
 });
 app.post("/webhooks"),async function(req,res){
+    res.send("Soy el webhook")
+
 console.log("te quiero muco")
 }
 
