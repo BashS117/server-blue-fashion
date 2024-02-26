@@ -36,6 +36,7 @@ app.post("/create_preference", async(req,res)=>{
                 pending:"https://distribuidoramundoramirez.vercel.app/",
             },
             auto_return:"approved",
+            notification_url: "https://server-distribuidora-mundo-ramirez.vercel.app/webhooks"
         };
         const preference = new Preference(client);
         const result = await preference.create({body});
@@ -51,6 +52,10 @@ app.post("/create_preference", async(req,res)=>{
         
     }
 });
+app.post("/webhooks"),async function(req,res){
+console.log("te quiero muco")
+}
+
 app.listen(port,()=>{
     console.log(`el servidor esta corriendo en el puerto ${port}`);
 })
