@@ -42,7 +42,7 @@ app.post("/create_preference", async(req,res)=>{
         const result = await preference.create({body});
 
         res.json({
-            id:result.id,
+            id:result,
         });
     }catch(error){
         console.log(error);
