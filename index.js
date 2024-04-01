@@ -31,9 +31,9 @@ app.post("/create_preference", async(req,res)=>{
             }
             ],
             back_urls:{
-                success:"https://distribuidoramundoramirez.vercel.app/",
-                failure:"https://distribuidoramundoramirez.vercel.app/",
-                pending:"https://distribuidoramundoramirez.vercel.app/",
+                success:"https://blue-fashion.vercel.app/",
+                failure:"https://blue-fashion.vercel.app/",
+                pending:"https://blue-fashion.vercel.app/",
             },
             auto_return:"approved",
             // notification_url: "https://server-distribuidora-mundo-ramirez.vercel.app/webhook"
