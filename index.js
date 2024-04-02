@@ -31,7 +31,7 @@ app.post("/create_preference", async(req,res)=>{
             }
             ],
             back_urls:{
-                success:"http://localhost:5173/feedback/:collection_id/:collection_status/:payment_id/:status/:external_reference/:payment_type/:merchant_order_id/:preference_id/:site_id/:processing_mode/:merchant_account_id",
+                success:"http://localhost:5173/feedback/",
                 failure:"https://blue-fashion.vercel.app/",
                 pending:"https://blue-fashion.vercel.app/",
             },
