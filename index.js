@@ -31,7 +31,7 @@ app.post("/create_preference", async(req,res)=>{
             }
             ],
             back_urls:{
-                success:"https://blue-fashion.vercel.app/",
+                success:"http://localhost:5173/feedback",
                 failure:"https://blue-fashion.vercel.app/",
                 pending:"https://blue-fashion.vercel.app/",
             },
