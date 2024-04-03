@@ -32,8 +32,8 @@ app.post("/create_preference", async(req,res)=>{
             ],
             back_urls:{
                 success:"http://localhost:5173/feedback/",
-                failure:"https://blue-fashion.vercel.app/",
-                pending:"https://blue-fashion.vercel.app/",
+                failure:"http://localhost:5173/feedback/",
+                pending:"http://localhost:5173/feedback/",
             },
             auto_return:"approved",
             // notification_url: "https://server-distribuidora-mundo-ramirez.vercel.app/webhook"
