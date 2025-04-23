@@ -4,8 +4,9 @@ import cors from "cors";
 //SDK de mercado pago
 import {MercadoPagoConfig, Preference} from "mercadopago";
 
+//agrega credenciales
 const client = new MercadoPagoConfig({
-    accessToken: process.env.accessToken,
+    accessToken: 'APP_USR-3540789625734896-022512-4873d2f2a5dbe080880343ea2a194960-1700198650',
 });
 
 const app = express();
