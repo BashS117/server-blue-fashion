@@ -4,7 +4,6 @@ import cors from "cors";
 //SDK de mercado pago
 import {MercadoPagoConfig, Preference} from "mercadopago";
 
-//agrega credenciales
 const client = new MercadoPagoConfig({
     accessToken: process.env.accessToken,
 });
@@ -31,10 +30,10 @@ app.post("/create_preference", async(req,res)=>{
                 
             }
             ],
-            back_url:{
-                success:"https://bluefashionboutique.com/feedback/",
-                failure:"https://bluefashionboutique.com/feedback/",
-                pending:"https://bluefashionboutique.com/feedback/",
+            back_urls:{
+                success:"http://bluefashionboutique.com/feedback/",
+                failure:"http://bluefashionboutique.com/feedback/",
+                pending:"http://bluefashionboutique.com/feedback/",
             },
             auto_return:"approved",
             // notification_url: "https://server-distribuidora-mundo-ramirez.vercel.app/webhook"
@@ -45,13 +44,10 @@ app.post("/create_preference", async(req,res)=>{
         res.json({
             id:result.id,
         });
-        console.log("Body recibido:", req.body);
-console.log("Payload enviado a Mercado Pago:", body);
     }catch(error){
-        console.error("❌ Error real:", error);
+        console.log(error);
         res.status(500).json({
-          error: error.message || "Error desconocido",
-          details: error, // También te muestra más detalles si existen
+            error:"ERROR al crear la preferencia"
         });
         
     }
