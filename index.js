@@ -45,10 +45,13 @@ app.post("/create_preference", async(req,res)=>{
         res.json({
             id:result.id,
         });
+        console.log("Body recibido:", req.body);
+console.log("Payload enviado a Mercado Pago:", body);
     }catch(error){
-        console.log(error);
+        console.error("❌ Error real:", error);
         res.status(500).json({
-            error:"ERROR al crear la preferencia"
+          error: error.message || "Error desconocido",
+          details: error, // También te muestra más detalles si existen
         });
         
     }
