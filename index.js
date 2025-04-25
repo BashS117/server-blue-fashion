@@ -31,7 +31,7 @@ app.post("/create_preference", async(req,res)=>{
             }
             ],
             back_urls:{
-                success:"https://localhost:5173/feedback/",
+                success:"https://bluefashionboutique.com/feedback/",
                 failure:"https://bluefashionboutique.com/feedback/",
                 pending:"https://bluefashionboutique.com/feedback/",
             },
